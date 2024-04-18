@@ -1,0 +1,255 @@
+@import '~@microsoft/sp-office-ui-fabric-core/dist/sass/SPFabricCore.scss';
+
+.ChangesForm {
+  overflow: hidden;
+  padding: 1em;
+  color: "[theme:bodyText, default: #323130]";
+  color: var(--bodyText);
+  &.teams {
+    font-family: $ms-font-family-fallbacks;
+  }
+}
+
+.welcome {
+  text-align: center;
+}
+
+.welcomeImage {
+  width: 100%;
+  max-width: 420px;
+}
+
+.links {
+  a {
+    text-decoration: none;
+    color: "[theme:link, default:#03787c]";
+    color: var(--link); // note: CSS Custom Properties support is limited to modern browsers only
+
+    &:hover {
+      text-decoration: underline;
+      color: "[theme:linkHovered, default: #014446]";
+      color: var(--linkHovered); // note: CSS Custom Properties support is limited to modern browsers only
+    }
+  }
+}
+
+#COForm {
+  height: 80vh;
+  top: 10vh;
+  left: 17vw;
+  background-color: white;
+  border: 3px solid #0078D4;
+  border-radius: 5px;
+  padding: 20px;
+  font-size: 1em;
+}
+
+#COFormContainer {
+  display: flex;
+  height: 70vh;
+  overflow: scroll;
+}
+
+#COFormLeft {
+  width: 520px; 
+}
+
+#COFormLeftTitle {
+  font-weight: bold;
+  font-size: 1.1em;
+  color: #0078D4;
+  padding: 3px;
+  width: 25vw;
+  text-align: center;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  text-decoration: underline;
+}
+
+#COFormRight {
+  width: 480px; 
+  padding-left: 30px;
+  border-left: 1px solid gray;
+}
+
+#TasksContainer {
+  min-height: 250px;
+  margin-bottom: 20px;
+}
+
+#TasksTitle {
+  font-weight: bold;
+  font-size: 1.1em;
+  color: #0078D4;
+  padding: 3px;
+  width: 25vw;
+  text-align: center;
+  border-radius: 5px;
+  text-decoration: underline;
+  margin-bottom: 10px;
+}
+
+#TasksDetails {
+  margin-bottom: 10px;
+}
+
+.taskrow {
+  display: flex;
+  border-bottom: 1px solid lightgray;
+  padding-top: 5px;
+  padding-bottom: 3px;
+}
+
+.taskrow div {
+  width: 150px;
+}
+
+.taskrow {
+  div.title {
+    width: 180px;
+  }
+}
+
+.taskrow {
+  &.taskrowheader {
+    font-weight: bold;
+  }
+}
+
+#EventsContainer {
+  min-height: 250px;
+  margin-bottom: 10px;
+}
+
+#EventsTitle {
+  font-weight: bold;
+  font-size: 1.1em;
+  color: #0078D4;
+  padding: 3px;
+  width: 25vw;
+  text-align: center;
+  border-radius: 5px;
+  text-decoration: underline;
+  margin-bottom: 10px;
+}
+
+#EventsDetails {
+  margin-bottom: 10px;
+}
+
+.eventrow {
+  display: flex;
+  border-bottom: 1px solid lightgray;
+  padding-top: 5px;
+  padding-bottom: 3px;
+}
+
+.eventrow {
+  div {
+    width: 170px;
+  }
+}
+
+.eventrow {
+  div {
+    &.title {
+      width: 130px;
+    }
+  }
+}
+
+.eventrow {
+  &.eventrowheader {
+    font-weight: bold;
+  }
+}
+
+#COFormButtonContainer {
+  height: 10%;
+  padding-top: 40px;
+  display: flex;
+}
+
+#COFormButtonContainer {
+  div {
+    font-size: .9em;
+  }
+}
+
+#OrderTopDetails {
+  margin-bottom: 10px;
+}
+
+.OrderTopDetailsRow {
+  display: flex;
+  margin-bottom: 5px;
+}
+
+.OrderTopDetailsRow {
+  div {
+    width: 50%;
+  }
+}
+
+.OrderTopDetailsRow {
+  div {
+    span {
+      font-weight: bold;
+    }
+  }
+}
+
+#OrderBottomDetails {
+  height: 45vh;
+}
+
+.OrderBottomDetailsLabel {
+  font-weight: bold;
+  font-size: .9em;
+}
+
+.OrderBottomDetailsValue {
+  margin-bottom: 20px;
+}
+
+#changelink {
+  margin-left: 20px;
+}
+
+#NewTask {
+  display: flex;
+  margin-bottom: 5px;
+}
+
+#NewTask {
+  div {
+    margin-right: 10px;
+  }
+}
+
+#NewTaskTitle {
+  width: 125px;
+}
+
+#NewTaskAssignedTo {
+  width: 140px;
+}
+
+#NewEvent {
+  display: flex;
+  margin-bottom: 5px;
+}
+
+#NewEventTitle {
+  width: 145px;
+  margin-right: 5px;
+}
+
+#NewEventStartDate {
+  width: 150px;
+  margin-right: 5px;
+}
+
+#NewEventEndDate {
+  width: 150px;
+}

@@ -1,0 +1,21 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "plusBeta": false,
+    "isCreatingSolution": false,
+    "nodeVersion": "18.17.1",
+    "sdksVersions": {
+      "@microsoft/microsoft-graph-client": "3.0.2",
+      "@microsoft/teams-js": "2.12.0"
+    },
+    "version": "1.18.2",
+    "libraryName": "change-management",
+    "libraryId": "3a083b0f-b8d9-4093-bea5-b903a0648996",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionName": "ChangeManagement",
+    "solutionShortDescription": "ChangeManagement description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "componentType": "webpart"
+  }
+}

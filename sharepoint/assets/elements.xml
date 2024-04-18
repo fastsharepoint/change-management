@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+
+    <Field
+        DisplayName="Project"
+        Format="Dropdown"
+        MaxLength="255"
+        Name="FSChangeOrderProject"
+        Title="Project"
+        Type="Text"
+        ID="{01f7be05-3799-4227-952a-ca33aa1ddb32}"
+        StaticName="FSChangeOrderProject"
+        ColName="nvarchar7"
+        RowOrdinal="0"
+        />
+
+    <Field
+        DisplayName="Date of Change"
+        FriendlyDisplayFormat="Disabled"
+        Format="DateOnly"
+        Name="FSChangeOrderDateofChange"
+        Title="Date of Change"
+        Type="DateTime"
+        ID="{103b0e18-d7f1-4e42-89dd-2cca9f19d511}"
+        StaticName="FSChangeOrderDateofChange"
+        ColName="datetime1"
+        RowOrdinal="0"
+        />
+
+    <Field
+        AppendOnly="FALSE"
+        DisplayName="Description of Change"
+        Format="Dropdown"
+        IsolateStyles="FALSE"
+        Name="FSChangeOrderDescriptionofChange"
+        RichText="FALSE"
+        RichTextMode="Compatible"
+        Title="Description of Change"
+        Type="Note"
+        ID="{f7521fb8-7c28-416e-bdbe-ddf27da8754d}"
+        StaticName="FSChangeOrderDescriptionofChange"
+        ColName="ntext2"
+        RowOrdinal="0"
+        />
+
+    <Field
+        AppendOnly="FALSE"
+        ClientSideComponentId="00000000-0000-0000-0000-000000000000"
+        DisplayName="Reason for Change"
+        Format="Dropdown"
+        IsolateStyles="FALSE"
+        Name="FSChangeOrderReasonforChange"
+        RichText="FALSE"
+        RichTextMode="Compatible"
+        Title="Reason for Change"
+        Type="Note"
+        ID="{9098ecb2-0644-4e42-b405-4d987823f2f3}"
+        Version="2"
+        StaticName="FSChangeOrderReasonforChange"
+        ColName="ntext3"
+        RowOrdinal="0"
+        />
+
+    <Field
+        AppendOnly="FALSE"
+        DisplayName="Impact on Schedule"
+        Format="Dropdown"
+        IsolateStyles="FALSE"
+        Name="FSChangeOrderImpactonSchedule"
+        RichText="FALSE"
+        RichTextMode="Compatible"
+        Title="Impact on Schedule"
+        Type="Note"
+        ID="{5890038e-926a-4813-8438-3e661e00d0ab}"
+        StaticName="FSChangeOrderImpactonSchedule"
+        ColName="ntext4"
+        RowOrdinal="0"
+        />
+
+    <Field
+        AppendOnly="FALSE"
+        DisplayName="Cost Impact"
+        Format="Dropdown"
+        IsolateStyles="FALSE"
+        Name="FSChangeOrderCostImpact"
+        RichText="FALSE"
+        RichTextMode="Compatible"
+        Title="Cost Impact"
+        Type="Note"
+        ID="{7524aea8-6c97-4bb5-9cac-6a97f4f600e5}"
+        StaticName="FSChangeOrderCostImpact"
+        ColName="ntext5"
+        RowOrdinal="0"
+        />
+
+    <Field
+        DisplayName="Approver"
+        Format="Dropdown"
+        List="UserInfo"
+        Name="FSChangeOrderApprover"
+        Title="Approver"
+        Type="User"
+        UserSelectionMode="0"
+        UserSelectionScope="0"
+        ID="{d471a9fb-849e-45bd-a211-f07a2c202c9a}"
+        StaticName="FSChangeOrderApprover"
+        ColName="int1"
+        RowOrdinal="0"
+        />
+
+    <Field
+        DisplayName="Status"
+        FillInChoice="FALSE"
+        Format="Dropdown"
+        Name="FSChangeOrderStatus"
+        Title="Status"
+        Type="Choice"
+        ID="{69549f73-c38b-4e10-a422-3407a2d45b23}"
+        StaticName="FSChangeOrderStatus"
+        ColName="nvarchar8"
+        RowOrdinal="0"
+        Required="FALSE"
+        EnforceUniqueValues="FALSE"
+        Indexed="FALSE"
+        Version="1">
+        <CHOICES>
+        <CHOICE>Open</CHOICE>
+        <CHOICE>In Review</CHOICE>
+        <CHOICE>In Progress</CHOICE>
+        <CHOICE>Completed</CHOICE>
+        <CHOICE>Rejected</CHOICE>
+        </CHOICES>
+    </Field>
+
+    <Field
+        Type="Choice"
+        DisplayName="Approval"
+        Required="FALSE"
+        EnforceUniqueValues="FALSE"
+        Indexed="FALSE"
+        Format="Dropdown"
+        FillInChoice="FALSE"
+        ID="{5e65306d-0112-45fc-84f7-861ede06c932}"
+        StaticName="FSChangeOrderApproval"
+        Name="FSChangeOrderApproval"
+        ColName="nvarchar9"
+        RowOrdinal="0">
+        <CHOICES>
+        <CHOICE>Approved</CHOICE>
+        <CHOICE>Rejected</CHOICE>
+        </CHOICES>
+    </Field>
+
+    <Field
+        Type="Choice"
+        DisplayName="Priority"
+        Required="FALSE"
+        EnforceUniqueValues="FALSE"
+        Indexed="FALSE"
+        Format="Dropdown"
+        FillInChoice="FALSE"
+        ID="{8091e408-a467-4a76-837a-5e14348d6bb1}"
+        StaticName="FSChangeOrderPriority"
+        Name="FSChangeOrderPriority"
+        ColName="nvarchar10"
+        RowOrdinal="0">
+        <Default>Low</Default>
+        <CHOICES>
+        <CHOICE>Low</CHOICE>
+        <CHOICE>Medium</CHOICE>
+        <CHOICE>High</CHOICE>
+        </CHOICES>
+    </Field>
+
+    <ContentType ID="0x0100FC0D2E021AF92C4C86B08300A986F82B00105E1835B7DD0C44B2EDCDEA757A1EAE"
+        Name="ChangeOrder"
+        Group="List Content Types"
+        Description="Create a new list item.">
+        <FieldRefs>
+            <FieldRef ID="01f7be05-3799-4227-952a-ca33aa1ddb32" />
+            <FieldRef ID="103b0e18-d7f1-4e42-89dd-2cca9f19d511" />
+            <FieldRef ID="f7521fb8-7c28-416e-bdbe-ddf27da8754d" />
+            <FieldRef ID="9098ecb2-0644-4e42-b405-4d987823f2f3" />
+            <FieldRef ID="5890038e-926a-4813-8438-3e661e00d0ab" />
+            <FieldRef ID="7524aea8-6c97-4bb5-9cac-6a97f4f600e5" />
+            <FieldRef ID="d471a9fb-849e-45bd-a211-f07a2c202c9a" />
+            <FieldRef ID="69549f73-c38b-4e10-a422-3407a2d45b23" />
+            <FieldRef ID="5e65306d-0112-45fc-84f7-861ede06c932" />
+            <FieldRef ID="8091e408-a467-4a76-837a-5e14348d6bb1" />
+        </FieldRefs>
+    </ContentType>
+
+    <ListInstance
+        CustomSchema="changeordersschema.xml"
+        FeatureId="00bfea71-de22-43b2-a848-c05709900100"
+        Title="Change Orders"
+        Description=""
+        TemplateType="100"
+        Url="Lists/Change Orders">
+    </ListInstance>
+
+    <Field
+        DisplayName="Assigned"
+        Format="Dropdown"
+        List="UserInfo"
+        Name="FSChangeTaskAssigned"
+        Title="Assigned"
+        Type="User"
+        UserSelectionMode="0"
+        UserSelectionScope="0"
+        ID="{cdf42597-72e8-4b75-8465-0e5522012764}"
+        StaticName="FSChangeTaskAssigned"
+        ColName="int1"
+        RowOrdinal="0"
+        />
+
+    <Field
+        DisplayName="Completed"
+        Format="Dropdown"
+        Name="FSChangeTaskCompleted"
+        Title="Completed"
+        Type="Boolean"
+        ID="{a0434cab-b44c-4e06-b430-1ddd795792e7}"
+        StaticName="FSChangeTaskCompleted"
+        ColName="bit1"
+        RowOrdinal="0">
+        <Default>0</Default>
+    </Field>
+
+    <Field
+        DisplayName="Change Order"
+        Format="Dropdown"
+        Indexed="FALSE"
+        List="Lists/Change Orders"
+        Name="FSChangeTaskChangeOrder"
+        ShowField="Title"
+        Title="Change Order"
+        Type="Lookup"
+        ID="{2f349aa7-f1cd-4972-952f-658d011ce389}"
+        StaticName="FSChangeTaskChangeOrder"
+        ColName="int2"
+        RowOrdinal="0"
+        />
+
+    <ContentType ID="0x0100EEFAF1DD692976409247A2AAEC799BA800762B88558BD09F42B85D7A78C40AD5C4"
+        Name="ChangeTask"
+        Group="List Content Types"
+        Description="Create a new list item.">
+        <FieldRefs>
+            <FieldRef ID="cdf42597-72e8-4b75-8465-0e5522012764" />
+            <FieldRef ID="a0434cab-b44c-4e06-b430-1ddd795792e7" />
+            <FieldRef ID="2f349aa7-f1cd-4972-952f-658d011ce389" />
+        </FieldRefs>
+    </ContentType>
+
+    <ListInstance
+        CustomSchema="changetasksschema.xml"
+        FeatureId="00bfea71-de22-43b2-a848-c05709900100"
+        Title="Change Tasks"
+        Description=""
+        TemplateType="100"
+        Url="Lists/Change Tasks">
+    </ListInstance>
+
+    <Field
+        DisplayName="Change Order"
+        Format="Dropdown"
+        Indexed="FALSE"
+        List="Lists/Change Orders"
+        Name="FSChangeEventChangeOrder"
+        ShowField="Title"
+        Title="Change Order"
+        Type="Lookup"
+        ID="{60076483-7ff1-4988-b15f-9063a31c565e}"
+        StaticName="ChangeOrder"
+        ColName="int1"
+        RowOrdinal="0"
+        />
+
+    <Field
+        DisplayName="Start Date"
+        FriendlyDisplayFormat="Disabled"
+        Format="DateTime"
+        Name="FSChangeEventStartDate"
+        Title="Start Date"
+        Type="DateTime"
+        ID="{1307cdf3-06c3-42b1-930e-c5dd496e411c}"
+        StaticName="FSChangeEventStartDate"
+        ColName="datetime1"
+        RowOrdinal="0"
+        Required="FALSE"
+        EnforceUniqueValues="FALSE"
+        Indexed="FALSE"
+        CalType="0"
+        Version="1">
+        <Default>[today]</Default>
+    </Field>
+
+    <Field
+        DisplayName="End Date"
+        FriendlyDisplayFormat="Disabled"
+        Format="DateTime"
+        Name="FSChangeEventEndDate"
+        Title="End Date"
+        Type="DateTime"
+        ID="{cd1a0595-1e70-4751-bc82-e84326ef05e0}"
+        StaticName="FSChangeEventEndDate"
+        ColName="datetime2"
+        RowOrdinal="0"
+        Required="FALSE"
+        EnforceUniqueValues="FALSE"
+        Indexed="FALSE"
+        CalType="0"
+        Version="1"
+        />
+
+    <ContentType ID="0x01001E2DC0283D36244EB7E41A66B98D3D6D00499ED280BE6B1E448A315BC4F2CE44F0"
+        Name="ChangeEvent"
+        Group="List Content Types"
+        Description="Create a new list item.">
+        <FieldRefs>
+            <FieldRef ID="60076483-7ff1-4988-b15f-9063a31c565e" />
+            <FieldRef ID="1307cdf3-06c3-42b1-930e-c5dd496e411c" />
+            <FieldRef ID="cd1a0595-1e70-4751-bc82-e84326ef05e0" />
+        </FieldRefs>
+    </ContentType>
+
+    <ListInstance
+        CustomSchema="changeeventsschema.xml"
+        FeatureId="00bfea71-de22-43b2-a848-c05709900100"
+        Title="Change Events"
+        Description=""
+        TemplateType="100"
+        Url="Lists/Change Events">
+    </ListInstance>
+
+</Elements>

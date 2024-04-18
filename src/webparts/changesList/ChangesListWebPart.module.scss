@@ -1,0 +1,68 @@
+@import '~@microsoft/sp-office-ui-fabric-core/dist/sass/SPFabricCore.scss';
+
+.changesList {
+  overflow: hidden;
+  padding: 1em;
+  color: "[theme:bodyText, default: #323130]";
+  color: var(--bodyText);
+  &.teams {
+    font-family: $ms-font-family-fallbacks;
+  }
+}
+
+.links {
+  a {
+    text-decoration: none;
+    color: "[theme:link, default:#03787c]";
+    color: var(--link); // note: CSS Custom Properties support is limited to modern browsers only
+
+    &:hover {
+      text-decoration: underline;
+      color: "[theme:linkHovered, default: #014446]";
+      color: var(--linkHovered); // note: CSS Custom Properties support is limited to modern browsers only
+    }
+  }
+}
+
+#ListContainer {
+  overflow: scroll;
+  height: 300px;
+  &.opened {height: 50vh;}
+}
+
+#TabsContainer {
+  display: flex; width: 1150px;
+  div {width: 130px; padding: 5px; border-bottom: solid 1px gray;}
+  .tab {
+    &.active {border-top: solid 3px #0078D4; border-left: solid 1px gray; border-right: solid 1px gray; border-bottom: none; font-weight: bold;}
+    &:hover {cursor: pointer;}
+  }
+}
+
+.RowsContainer {
+  display: none; width: 1100px; padding-left: 10px;
+  &.show {display: inline-block;}
+  .row {display: flex;
+    border-bottom: 1px solid lightgray;
+    padding-top: 5px;
+    padding-bottom: 3px;
+    &.header {
+      font-weight: bold;
+      div {
+        width: 130px;
+        &.id {width: 30px;}
+        &.title {width: 230px;}
+      }
+    }
+    .col {
+      width: 130px;
+      &.id {width: 30px;}
+      &.title {width: 230px;}
+      .low {background-color: green; color: white; padding-left: 5px; width: 120px;}
+      .medium {background-color: yellow; color: #323130; padding-left: 5px; width: 120px;}
+      .high {background-color: red; color: white; padding-left: 5px; width: 120px;}
+    }
+  }
+  
+}
+

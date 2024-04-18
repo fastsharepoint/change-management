@@ -1,0 +1,51 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "change-management-client-side-solution",
+    "title": "Change Management Solution",
+    "id": "168d5323-ecaf-4dec-8637-a04835d379e0",
+    "version": "1.0.0.22",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "Chris Gomez",
+      "websiteUrl": "fastsharepoint.com",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.18.2"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "Change Management"
+      },
+      "longDescription": {
+        "default": "Change Management"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "change-management Feature",
+        "description": "The feature that activates elements of the change-management solution.",
+        "id": "9fcad602-1ffc-4a62-8e37-688b3faf7ad4",
+        "version": "1.0.0.0",
+        "assets": {
+          "elementManifests": [
+            "elements.xml"
+          ],
+          "elementFiles": [
+            "changeordersschema.xml",
+            "changetasksschema.xml",
+            "changeeventsschema.xml"
+          ]
+        }
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/change-management.sppkg"
+  }
+}
